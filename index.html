@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Lê Phong (SodaEvil)</title>
+
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+    </div>
+    <style>
+        @-webkit-keyframes snowflakes-fall {
+            0% {
+                top: -10%
+            }
+            100% {
+                top: 100%
+            }
+        }
+        
+        @-webkit-keyframes snowflakes-shake {
+            0%,
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0)
+            }
+            50% {
+                -webkit-transform: translateX(80px);
+                transform: translateX(80px)
+            }
+        }
+        
+        @keyframes snowflakes-fall {
+            0% {
+                top: -10%
+            }
+            100% {
+                top: 100%
+            }
+        }
+        
+        @keyframes snowflakes-shake {
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+            50% {
+                transform: translateX(80px)
+            }
+        }
+        
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 0 0 5px #000;
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+            -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+            -webkit-animation-duration: 10s, 3s;
+            -webkit-animation-timing-function: linear, ease-in-out;
+            -webkit-animation-iteration-count: infinite, infinite;
+            -webkit-animation-play-state: running, running;
+            animation-name: snowflakes-fall, snowflakes-shake;
+            animation-duration: 10s, 3s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            animation-play-state: running, running;
+        }
+        
+        .snowflake:nth-of-type(0) {
+            left: 1%;
+            -webkit-animation-delay: 0s, 0s;
+            animation-delay: 0s, 0s
+        }
+        
+        .snowflake:nth-of-type(1) {
+            left: 10%;
+            -webkit-animation-delay: 1s, 1s;
+            animation-delay: 1s, 1s
+        }
+        
+        .snowflake:nth-of-type(2) {
+            left: 20%;
+            -webkit-animation-delay: 6s, .5s;
+            animation-delay: 6s, .5s
+        }
+        
+        .snowflake:nth-of-type(3) {
+            left: 30%;
+            -webkit-animation-delay: 4s, 2s;
+            animation-delay: 4s, 2s
+        }
+        
+        .snowflake:nth-of-type(4) {
+            left: 40%;
+            -webkit-animation-delay: 2s, 2s;
+            animation-delay: 2s, 2s
+        }
+        
+        .snowflake:nth-of-type(5) {
+            left: 50%;
+            -webkit-animation-delay: 8s, 3s;
+            animation-delay: 8s, 3s
+        }
+        
+        .snowflake:nth-of-type(6) {
+            left: 60%;
+            -webkit-animation-delay: 6s, 2s;
+            animation-delay: 6s, 2s
+        }
+        
+        .snowflake:nth-of-type(7) {
+            left: 70%;
+            -webkit-animation-delay: 2.5s, 1s;
+            animation-delay: 2.5s, 1s
+        }
+        
+        .snowflake:nth-of-type(8) {
+            left: 80%;
+            -webkit-animation-delay: 1s, 0s;
+            animation-delay: 1s, 0s
+        }
+        
+        .snowflake:nth-of-type(9) {
+            left: 90%;
+            -webkit-animation-delay: 3s, 1.5s;
+            animation-delay: 3s, 1.5s
+        }
+        
+        .snowflake:nth-of-type(10) {
+            left: 25%;
+            -webkit-animation-delay: 2s, 0s;
+            animation-delay: 2s, 0s
+        }
+        
+        .snowflake:nth-of-type(11) {
+            left: 65%;
+            -webkit-animation-delay: 4s, 2.5s;
+            animation-delay: 4s, 2.5s
+        }
+    </style>
+
+    <body>
+        <script type='text/javascript'>
+            ! function(e, t, a) {
+                function n() {
+                    c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), o(), r()
+                }
+
+                function r() {
+                    for (var e = 0; e < d.length; e++) d[e].alpha <= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999");
+                    requestAnimationFrame(r)
+                }
+
+                function o() {
+                    var t = "function" == typeof e.onclick && e.onclick;
+                    e.onclick = function(e) {
+                        t && t(), i(e)
+                    }
+                }
+
+                function i(e) {
+                    var a = t.createElement("div");
+                    a.className = "heart", d.push({
+                        el: a,
+                        x: e.clientX - 5,
+                        y: e.clientY - 5,
+                        scale: 1,
+                        alpha: 1,
+                        color: s()
+                    }), t.body.appendChild(a)
+                }
+
+                function c(e) {
+                    var a = t.createElement("style");
+                    a.type = "text/css";
+                    try {
+                        a.appendChild(t.createTextNode(e))
+                    } catch (t) {
+                        a.styleSheet.cssText = e
+                    }
+                    t.getElementsByTagName("head")[0].appendChild(a)
+                }
+
+                function s() {
+                    return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+                }
+                var d = [];
+                e.requestAnimationFrame = function() {
+                    return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function(e) {
+                        setTimeout(e, 1e3 / 60)
+                    }
+                }(), n()
+            }(window, document);
+        </script>
+        <script language="JavaScript">
+            window.onload = function() {
+                document.addEventListener("contextmenu", function(e) {
+                    e.preventDefault();
+                }, false);
+                document.addEventListener("keydown", function(e) {
+                    //document.onkeydown = function(e) {
+                    // "I" key
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                        disabledEvent(e);
+                    }
+                    // "J" key
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                        disabledEvent(e);
+                    }
+                    // "S" key + macOS
+                    if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                        disabledEvent(e);
+                    }
+                    // "U" key
+                    if (e.ctrlKey && e.keyCode == 85) {
+                        disabledEvent(e);
+                    }
+                    // "F12" key
+                    if (event.keyCode == 123) {
+                        disabledEvent(e);
+                    }
+                }, false);
+
+                function disabledEvent(e) {
+                    if (e.stopPropagation) {
+                        e.stopPropagation();
+                    } else if (window.event) {
+                        window.event.cancelBubble = true;
+                    }
+                    e.preventDefault();
+                    return false;
+                }
+            };
+        </script>
+        <script type='text/javascript'>
+            //<![CDATA[
+            shortcut = {
+                all_shortcuts: {},
+                add: function(a, b, c) {
+                    var d = {
+                        type: "keydown",
+                        propagate: !1,
+                        disable_in_input: !1,
+                        target: document,
+                        keycode: !1
+                    };
+                    if (c)
+                        for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]);
+                    else c = d;
+                    d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)), a = a.toLowerCase(), e = function(d) {
+                        d = d || window.event;
+                        if (c.disable_in_input) {
+                            var e;
+                            d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (e = e.parentNode);
+                            if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return
+                        }
+                        d.keyCode ? code = d.keyCode : d.which && (code = d.which), e = String.fromCharCode(code).toLowerCase(), 188 == code && (e = ","), 190 == code && (e = ".");
+                        var f = a.split("+"),
+                            g = 0,
+                            h = {
+                                "`": "~",
+                                1: "!",
+                                2: "@",
+                                3: "#",
+                                4: "$",
+                                5: "%",
+                                6: "^",
+                                7: "&",
+                                8: "*",
+                                9: "(",
+                                0: ")",
+                                "-": "_",
+                                "=": "+",
+                                ";": ":",
+                                "'": '"',
+                                ",": "<",
+                                ".": ">",
+                                "/": "?",
+                                "\\": "|"
+                            },
+                            i = {
+                                esc: 27,
+                                escape: 27,
+                                tab: 9,
+                                space: 32,
+                                "return": 13,
+                                enter: 13,
+                                backspace: 8,
+                                scrolllock: 145,
+                                scroll_lock: 145,
+                                scroll: 145,
+                                capslock: 20,
+                                caps_lock: 20,
+                                caps: 20,
+                                numlock: 144,
+                                num_lock: 144,
+                                num: 144,
+                                pause: 19,
+                                "break": 19,
+                                insert: 45,
+                                home: 36,
+                                "delete": 46,
+                                end: 35,
+                                pageup: 33,
+                                page_up: 33,
+                                pu: 33,
+                                pagedown: 34,
+                                page_down: 34,
+                                pd: 34,
+                                left: 37,
+                                up: 38,
+                                right: 39,
+                                down: 40,
+                                f1: 112,
+                                f2: 113,
+                                f3: 114,
+                                f4: 115,
+                                f5: 116,
+                                f6: 117,
+                                f7: 118,
+                                f8: 119,
+                                f9: 120,
+                                f10: 121,
+                                f11: 122,
+                                f12: 123
+                            },
+                            j = !1,
+                            l = !1,
+                            m = !1,
+                            n = !1,
+                            o = !1,
+                            p = !1,
+                            q = !1,
+                            r = !1;
+                        d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !0);
+                        for (var s = 0; k = f[s], s < f.length; s++) "ctrl" == k || "control" == k ? (g++, m = !0) : "shift" == k ? (g++, j = !0) : "alt" == k ? (g++, o = !0) : "meta" == k ? (g++, q = !0) : 1 < k.length ? i[k] == code && g++ : c.keycode ? c.keycode == code && g++ : e == k ? g++ : h[e] && d.shiftKey && (e = h[e], e == k && g++);
+                        if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate)) return d.cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d.stopPropagation(), d.preventDefault()), !1
+                    }, this.all_shortcuts[a] = {
+                        callback: e,
+                        target: d,
+                        event: c.type
+                    }, d.addEventListener ? d.addEventListener(c.type, e, !1) : d.attachEvent ? d.attachEvent("on" + c.type, e) : d["on" + c.type] = e
+                },
+                remove: function(a) {
+                    var a = a.toLowerCase(),
+                        b = this.all_shortcuts[a];
+                    delete this.all_shortcuts[a];
+                    if (b) {
+                        var a = b.event,
+                            c = b.target,
+                            b = b.callback;
+                        c.detachEvent ? c.detachEvent("on" + a, b) : c.removeEventListener ? c.removeEventListener(a, b, !1) : c["on" + a] = !1
+                    }
+                }
+            }, shortcut.add("Ctrl+U", function() {
+                top.location.href = ""
+            }), shortcut.add("F12", function() {
+                top.location.href = ""
+            }), shortcut.add("Ctrl+Shift+I", function() {
+                top.location.href = ""
+            }), shortcut.add("Ctrl+S", function() {
+                top.location.href = ""
+            }), shortcut.add("Ctrl+Shift+C", function() {
+                top.location.href = ""
+            });
+            //]]>
+        </script>
+
+
+        <!-- Meta Data -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="author" content="Trần Lê Phong">
+
+
+
+        <!-- Favicons -->
+<link href='https://1.bp.blogspot.com/-hgQuQLjKWiM/YKytpXcsa6I/AAAAAAAAFiU/j3Ixpn1632M_SuCVcgvFY01Vxg5gV2EdwCLcBGAsYHQ/s16000/favicon-1000x1000.png' rel='shortcut icon' type='image/x-icon'/>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="cc.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/styles/style-dark.css">
+        <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css">
+
+
+
+    </body>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__wrap">
+            <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+            <div class="preloader__progress"><span></span></div>
+        </div>
+    </div>
+
+    <main class="main">
+
+        <!-- Header Image -->
+        <div class="header-image">
+            <div class="js-parallax" style="background-image: url(https://i.pinimg.com/originals/78/f4/f1/78f4f1eb260f437115c640a4aeb58c29.jpg);"></div>
+        </div>
+        
+        <div class="container gutter-top ">
+            <!-- Header -->
+            <header class="header box">
+                <div class="header__left">
+                    <div class="header__photo">
+                        <img class="header__photo-img" src="./img/avatarsoda.jpg" alt="Trần Lê Phong">
+                    </div>
+                    <div class="header__base-info">
+                        <h2 class="title title--h2"><b>Trần Lê Phong</b></h2>
+                        <div class="skill-item" style="color: #EF9D64;"><b>Coder - Cameraman</b></div>
+                        <ul class="header__social">
+                            <li><a href="https://www.facebook.com/SodaEvil/" target="_blank"><span class="nav-link-icon mr-1">
+        <i class="icon-img"><img height="20" src="https://subgiare.vn/assets/images/icon/facebook.svg"></i>
+       </span></a></li>
+                            <li><a href="https://zalo.me/0903508237/" target="_blank"><span class="nav-link-icon mr-1">
+        <i class="icon-img"><img height="20" src="./img/zalo.png"></i>
+       </span></a></li>
+                            <li><a href="UPDATESOON" target="_blank"><span class="nav-link-icon mr-1">
+        <i class="icon-img"><img height="20" src="/img/ig.jpg"></i>
+       </span></a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                  <div class="header__right">
+                    <ul class="header__contact">
+                        <li><span class="overhead"><i class="icon-img"><img height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Circle-icons-mail.svg/1200px-Circle-icons-mail.svg.png"></i></span>
+                            <a href="mailto:Tranlephong.work@gmail.com" target="_blank">
+                                <font color="white"><b>Tranlephong.work@gmail.com</b></font>
+                            </a>
+                        </li>
+                        <li><span class="overhead"><i class="icon-img"><img height="25" src="https://cdn-icons-png.flaticon.com/128/901/901141.png"></i></span>
+                            <a href="tel:0334955115" target="_blank">
+                                <font color="white"><b>0903508237</b></font>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__contact">
+                       <li><span class="overhead"><i class="icon-img"><img height="25" src="https://subgiare.vn/assets/images/icon/globe.svg"></i></span><a href="https://www.facebook.com/icstudiovietnam" target="_blank"><font color="white"><b>IC Studio</b></font></a></li>
+                        <li><span class="overhead"><i class="icon-img"><img height="25" src="./img/puplic.png"></i></span>
+                            <a href="https://vi.wikipedia.org/wiki/%C4%90%C3%A0_N%E1%BA%B5ng" target="_blank">
+                                <font color="white"><b>Đà Nẵng</b></font>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="row sticky-parent">
+                <!-- Sidebar nav -->
+
+                <!-- Content -->
+                <div class="col-12">
+                    <div class="box box-content">
+
+
+                        <!-- What -->
+                        <div class="mt-1">
+
+                            <h3 class="title title--h2 first-title title__separate">CÁC PHƯƠNG THỨC THANH TOÁN</h3>
+                            <div class="row">
+                                <!-- Case Item -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="case-item">
+                                        <img src="./img/techcombank.png" height="55px">
+                                        <div>&nbsp;
+                                            <h4 class="title title--h4">TECHCOMBANK</h4>
+                                            <p><b>TRAN LE PHONG</b><br><b>XXXXXXXX</b></p>
+                                            <button type="button" style="height:30px;width:100px" class="btn btn-primary" onclick="geturl('9777702864')">COPY</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Case Item -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="case-item">
+                                        <img src="./img/aribank.png" height="55px">
+                                        <div>&nbsp;
+                                            <h4 class="title title--h4">AGRIBANK</h4>
+                                            <p><b>TRAN LE PHONG</b><br><b>2007205028313</b></p>
+                                            <button type="button" style="height:30px;width:100px" class="btn btn-primary" onclick="get('2007205028313')">COPY</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Case Item -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="case-item">
+                                        <img src="./img/momo.png" height="55px">
+                                        <div>&nbsp;
+                                            <h4 class="title title--h4">Ví Momo</h4>
+                                            <p><b>Trần Lê Phong</b><br><b>0903.508.237</b></p>
+                                            <button type="button" style="height:30px;width:100px" class="btn btn-primary" onclick="geturl('0334955115')">COPY</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="case-item">
+                                        <img src="./img/pay.png" height="55px">
+                                        <div>&nbsp;
+                                            <h4 class="title title--h4">Ví ZaloPay</h4>
+                                            <p><b>Trần Lê Phong</b><br><b>0903.508.237</b></p>
+                                            <button type="button" style="height:30px;width:100px" class="btn btn-primary" onclick="geturl('0334955115')">COPY</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Case Item -->
+
+                            </div>
+                            <center>
+                                <a style="color:#fff;" href="https://github.com/ngocminhvn>Ghé Thăm Website</a>
+
+                            </center>
+                        </div>
+
+                        <!-- Clients -->
+
+                    </div>
+
+                    <script>
+                        function geturl(giatri) {
+                            var $temp = $("<input>
+                    </script>
+
+                    <!-- Footer -->
+                    <footer class="footer">Mọi Chi Tiết Xin Liên Hệ <a href="https://www.facebook.com/SodaEvil/">SodaEvil</a></footer>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- SVG masks -->
+    <svg class="svg-defs">
+        <clippath id="avatar-box">
+            <path d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z"></path>
+        </clippath>
+        <clippath id="avatar-hexagon">
+             <path d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z"></path>
+        </clippath>   
+    </svg>
+
+    <div class="back-to-top"></div>
+
+
+
+    <!-- JavaScripts -->
+    <script data-cfasync="false" src="email.min.js"></script>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/common.js"></script>
+
+    <script src="assets/demo/plugins-demo.js"></script>
+</body>
+
+</html>
